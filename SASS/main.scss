@@ -1,7 +1,7 @@
 $colors: (
-    primary: #fff,
-    text-background: mix(white, #000, 7%),
-    section-background: mix(white, #000, 20%) 
+    primary: #ffffff,
+    text-background: mix(white, #000000, 7%),
+    section-background: mix(white, #000000, 20%) 
 );
 
 $text-padding: 20px;
@@ -45,13 +45,13 @@ body, html {
             letter-spacing: 13px;
             font-size: $fonts;
             background-color: color(text-background);
-            color: #fff;
+            color: #ffffff;
             padding: $text-padding;
             
         }
 
         span {
-            color: #fff;
+            color: #ffffff;
             text-transform: uppercase;
             font-size: $fonts;
             word-spacing: 10px;
@@ -104,11 +104,5 @@ body, html {
 
     .image__3 {
         background: url('../images/image3.jpg') fixed center;
-        height: $default-height / 1.5;
-
-        @include mobile {
-            background-attachment: scroll;
-            height: $default-height / 2;
-        }
     }
 }
