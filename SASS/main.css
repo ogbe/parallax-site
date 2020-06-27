@@ -1,0 +1,95 @@
+body, html {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.container .section--image {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
+}
+
+.container .section--image p {
+  text-transform: uppercase;
+  letter-spacing: 13px;
+  font-size: 30px;
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+}
+
+.container .section--image span {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  word-spacing: 10px;
+  letter-spacing: 10px;
+  width: 50%;
+}
+
+.container .section--text {
+  padding: 50px 70px;
+  background-color: #333333;
+  color: #dddddd;
+}
+
+.container .section--text h1 {
+  text-transform: capitalize;
+}
+
+.container .section--text p {
+  line-height: 30px;
+}
+
+.container .image__display {
+  background: url("../images/image1.jpg") fixed center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 560px) {
+  .container .image__display {
+    background-attachment: scroll;
+    height: 50vh;
+    padding: 0 30px;
+  }
+}
+
+.container .section__light {
+  background-color: #ffffff;
+  color: #666666;
+}
+
+.container .image__2, .container .image__3 {
+  background: url("../images/image2.jpg") fixed center;
+  height: 66.66667vh;
+}
+
+@media (max-width: 560px) {
+  .container .image__2, .container .image__3 {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+}
+
+.container .image__3 {
+  background: url("../images/image3.jpg") fixed center;
+  height: 66.66667vh;
+}
+
+@media (max-width: 560px) {
+  .container .image__3 {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,114 @@
+$colors: (
+    primary: #fff,
+    text-background: mix(white, #000, 7%),
+    section-background: mix(white, #000, 20%) 
+);
+
+$text-padding: 20px;
+$section-padding: 50px 70px;
+
+$fonts: 30px;
+
+$default-height: 100vh;
+
+$mobile: 560px;
+
+
+@function color($color-name) {
+    @return map-get($map: $colors, $key: $color-name)
+};
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+body, html {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.container {
+
+    .section--image {
+        height: $default-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+
+        p {
+            text-transform: uppercase;
+            letter-spacing: 13px;
+            font-size: $fonts;
+            background-color: color(text-background);
+            color: #fff;
+            padding: $text-padding;
+            
+        }
+
+        span {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: $fonts;
+            word-spacing: 10px;
+            letter-spacing: 10px;
+            width: 50%;
+        }
+
+    }
+    
+    .section--text {
+        padding: $section-padding;
+        background-color: color(section-background);
+        color: #dddddd;
+        
+        h1 {
+            text-transform: capitalize;
+        }
+
+        p {
+            line-height: 30px;
+        }
+        
+    }
+
+    .image__display {
+        background: url('../images/image1.jpg') fixed center no-repeat;
+        background-size: cover;
+
+        @include mobile {
+            background-attachment: scroll;
+            height: $default-height / 2;
+            padding: 0 30px;
+        }
+    }
+
+    .section__light {
+        background-color: #ffffff;
+        color: #666666;
+    }
+
+    .image__2, .image__3 {
+        background: url('../images/image2.jpg') fixed center;
+        height: $default-height / 1.5;
+
+        @include mobile {
+            background-attachment: scroll;
+            height: $default-height / 2;
+        }
+    }
+
+    .image__3 {
+        background: url('../images/image3.jpg') fixed center;
+        height: $default-height / 1.5;
+
+        @include mobile {
+            background-attachment: scroll;
+            height: $default-height / 2;
+        }
+    }
+}
